@@ -1,0 +1,20 @@
+*{
+	
+}
+
+select.form-control {}
+
+select.form-control {
+    /* size: 80px 100px; */
+    width: 200px;
+}
+
+textarea#exampleFormControlTextarea1 {
+    height: 350px;
+}
+.card {
+    width: auto;
+    height: 600px;
+    margin: 10px 50px;
+    background-color: #f8f9fa;
+}
