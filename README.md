@@ -1,2 +1,2 @@
 # LeoSi-Note
-# Feature : Note and animation
+# - Feature : Note and animation
