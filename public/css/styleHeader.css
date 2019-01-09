@@ -1,7 +1,20 @@
 *{
 	
 }
-
-ul.navbar-nav.mr-auto {
-    margin-left: 900px;
+a.btn.btn-success.btn-sm.waves-effect.waves-light {
+    height: 62%;
+    margin-top: 3%;
+    text-align: center;
+    background-color: #7afb77;
+    color: black;
 }
+.navbar {
+    background-color: #22b96b;
+    background-image: none;
+}
+ul.navbar-nav.mr-auto {
+    margin-left: 87%;
+    width: 23%;
+}
+
+

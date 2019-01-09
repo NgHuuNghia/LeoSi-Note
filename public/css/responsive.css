@@ -1,0 +1,6 @@
+@media only screen and (max-width: 1000px) {
+
+	ul.navbar-nav.mr-auto {
+	    margin-left: 0%;
+	}
+}
