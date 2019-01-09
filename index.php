@@ -1,20 +1,29 @@
 
-<?php require('app/views/header.php'); ?>
+<?php 
+	require_once('app/views/header.php'); 
+	require_once('app/controller/c_note.php')
+?>
 <?php
+$note = new c_note();
 if(isset($_POST['note']))
 {    
 	$text = $_POST['note'];
 	if($text !== "")
 	{
 	echo $text;
+	  $note->createNote($text,"dada");
+	 // $con = mysqli_connect("localhost", "root", "", "leosinotedb");
+	 // $query = "INSERT INTO note (content,create_at,token) VALUES ( '$text',CURRENT_TIME(), 'dadasadas')";
+	 // $con->query($query);
 	}
 	else
 	{
 		echo 'false';
 		header('Location: index.php');
 	}
-
+	// tao note ok => chuyen token sang trang infonote
 }
+$note = new c_note();
 ?>
 <div class="card">
 	<div class="card-body">
