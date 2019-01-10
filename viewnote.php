@@ -10,11 +10,11 @@
 	<div class="card-body">
 		<form method="POST" action="viewnote.php?token=<?php echo $_GET['token']; ?>">
 			<div class="form-group">
-			    <label for="exampleFormControlTextarea1"><h5>Note</h5></label> 
+			    <label for="exampleFormControlTextarea1"><h5>Note</h5></label>
+			    <button type="button" class="btn btn-primary" id="btnEdit" ><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
 			    <button type="button" class="btn btn-info" id="btnCopy" ><i class="fa fa-copy" style="font-size:15px"></i> Copy URL</button>
 			    <textarea class="form-control" name ="note" id="exampleFormControlTextarea1" rows="3" readonly><?php echo $content ;?></textarea>
 			</div>
-			
 		</form>
 	</div>
 </div>

@@ -1,4 +1,25 @@
-@media only screen and (max-width: 1000px) {
+/* Big tablet to 1200px */
+@media only screen and (max-width: 1200px) {
+
+	ul.navbar-nav.mr-auto {
+	    margin-left: 82%;
+	}
+	button#btnEdit {
+    margin-left: 22%;
+	}
+}
+/* small tablet to big tablet from 769 to 1023px */
+@media only screen and (max-width: 991px) {
+
+	ul.navbar-nav.mr-auto {
+	    margin-left: 0%;
+	}
+	button#btnEdit {
+    margin-left: 71%;
+	}
+}
+/* big phone to small tablet */
+@media only screen and (max-width: 768px) {
 
 	ul.navbar-nav.mr-auto {
 	    margin-left: 0%;
@@ -7,6 +28,24 @@
 		margin-left: 0%;
     	padding: 0px;
 	    visibility: hidden;
+	}
+	button#btnEdit {
+    margin-left: 22%;
+	}
+}
 
+/* small phone from 0 to 480px*/
+@media only screen and (max-width: 480px) {
+
+	ul.navbar-nav.mr-auto {
+	    margin-left: 0%;
+	}
+	button#btnCopy {
+		margin-left: 0%;
+    	padding: 0px;
+	    visibility: hidden;
+	}
+	button#btnEdit {
+    margin-left: 22%;
 	}
 }

@@ -20,8 +20,9 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Navagation bar  -->
 	<!-- Reponsive -->
 	<link rel="stylesheet" type="text/css" href="public/css/responsive.css">
+	<!-- Navagation bar  -->
 	<?php require('navbar.php'); ?>
+	
 <body>
