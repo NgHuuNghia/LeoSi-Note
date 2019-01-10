@@ -3,4 +3,10 @@
 	ul.navbar-nav.mr-auto {
 	    margin-left: 0%;
 	}
+	button#btnCopy {
+		margin-left: 0%;
+    	padding: 0px;
+	    visibility: hidden;
+
+	}
 }

@@ -12,14 +12,25 @@ class database {
 		$this->password = PASSWORD;
 	}
 	public function getConnection(){
-			$this->connection = mysqli_connect($this->database_host,$this->user_name,$this->password,$this->database_name);
+			// $this->connection = mysqli_connect($this->database_host,$this->user_name,$this->password,$this->database_name);
 			return $this->connection;
 		}
 	public function connect(){
 		$this->connected = false;
-		$this->connection = mysqli_connect($this->database_host,$this->user_name,$this->password,$this->database_name);
+		try{
+			error_reporting(E_ERROR | E_PARSE);
+			$this->connection = mysqli_connect($this->database_host,$this->user_name,$this->password,$this->database_name);
+			error_reporting(E_ERROR | E_PARSE);
+		}
+		catch (mysqli_sql_exception $e){
+			die("Can not connect database: ".mysqli_connect_error());
+		}
 		if($this->connection  !== false){
 			$this->connected = true;
+		}
+		else{
+			die("Can not connect database: ".mysqli_connect_error());
+
 		}
 		return $this->connected;
 	}
