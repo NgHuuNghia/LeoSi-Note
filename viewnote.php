@@ -11,7 +11,7 @@
 		<form method="POST" action="viewnote.php?token=<?php echo $_GET['token']; ?>">
 			<div class="form-group">
 			    <label for="exampleFormControlTextarea1"><h5>Note</h5></label>
-			    <button type="button" class="btn btn-primary" id="btnEdit" ><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
+			    <button type="button" class="btn btn-primary" id="btnEdit" name ="btnEdit" ><i class="fa fa-edit" style="font-size:15px"></i> Edit</button>
 			    <button type="button" class="btn btn-info" id="btnCopy" ><i class="fa fa-copy" style="font-size:15px"></i> Copy URL</button>
 			    <textarea class="form-control" name ="note" id="exampleFormControlTextarea1" rows="3" readonly><?php echo $content ;?></textarea>
 			</div>
@@ -31,6 +31,10 @@
 			var tempElement = $('<input>').val(url).appendTo('body').select();
 			document.execCommand('copy');
 			tempElement.remove();
+		})
+		$('#btnEdit').on('click',function(){
+			var url = "http://localhost:8888/LeoSi-Note/editnote.php?token=<?php echo $_GET['token']; ?>";
+			document.location.href = url;
 		})
 	});
 </script>
