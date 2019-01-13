@@ -1,7 +1,6 @@
 *{
 	
 }
-
 button#btnEdit {
     margin-left: 80%;
 }
@@ -18,7 +17,4 @@ textarea#exampleFormControlTextarea1 {
     height: 600px;
     margin: 10px 50px;
     background-color: #f8f9fa;
-}
-button#btnCopy {
-	
 }

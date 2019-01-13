@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<base href="<?php HOST?>" />
 	<meta charset="UTF-8">
 	<title>LeoSi Note</title>
+	<!-- LOGO -->
+	<link rel="shortcut icon" href=https://i.imgur.com/Sklu4Xh.png" type="image/png" />
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<!-- Header CSS -->
@@ -22,7 +25,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Reponsive -->
 	<link rel="stylesheet" type="text/css" href="public/css/responsive.css">
+	<!--Hide logo 000webhost-->
+	<style>img[alt="www.000webhost.com"]{display:none;}</style>
 	<!-- Navagation bar  -->
 	<?php require('navbar.php'); ?>
-	
+</head>		
 <body>

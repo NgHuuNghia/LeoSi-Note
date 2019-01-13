@@ -1,31 +1,37 @@
 
-<?php 
+<?php
+	require_once ('app/config/const.php');
 	require_once('app/views/header.php'); 
 	require_once('app/controller/c_note.php');
 	require_once('app/controller/c_setting.php');
 ?>
 <?php
+    ob_start();
 	$note = new c_note();
 	$setting = new c_setting();
 	if(isset($_POST['note']))
-	{    
+	{   
 		$text = addslashes($_POST['note']); // content contain a signle quote (')
 		if($text !== "")
 		{
-		  creatWithNewToken :
+		  createWithNewToken :
 		  $token = $note->createNote($text);
 		  $color = $_POST['cbbColorText'];
 		  $setting->createSetting($color,$token);
+		  
 		  if($token){
-		  	 header("Location: viewnote.php?token=$token");
+		  //	 header("Location:viewnote.php?token=$token"); // not working
+		  	 echo "<script type='text/javascript'>window.location.href = 'viewnote.php?token=$token';</script>";
+		  	 exit();
 		  }
 		  else{
 		  	//	 if token coincident
-		  	goto creatWithNewToken; 
+		  	goto createWithNewToken; 
 		  }
 		 
 		}
 	}
+	ob_end_flush();
 ?>
 <div class="card">
 	<div class="card-body">

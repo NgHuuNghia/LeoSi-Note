@@ -1,4 +1,5 @@
-<?php 
+<?php
+	require_once ('app/config/const.php');
 	require_once('app/views/header.php'); 
 	require_once('app/controller/c_note.php');
 	require_once('app/controller/c_setting.php');
@@ -31,13 +32,13 @@
 		});
 		
 		$('#btnCopy').on('click',function(){
-			var url = "http://localhost:8888/LeoSi-Note/viewnote.php?token=<?php echo $_GET['token']; ?>";
+			var url = "<?php echo HOST ?>viewnote.php?token=<?php echo $_GET['token']; ?>";
 			var tempElement = $('<input>').val(url).appendTo('body').select();
 			document.execCommand('copy');
 			tempElement.remove();
 		})
 		$('#btnEdit').on('click',function(){
-			var url = "http://localhost:8888/LeoSi-Note/editnote.php?token=<?php echo $_GET['token']; ?>";
+			var url = "<?php echo HOST ?>editnote.php?token=<?php echo $_GET['token']; ?>";
 			document.location.href = url;
 		})
 	});

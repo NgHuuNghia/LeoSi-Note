@@ -1,5 +1,6 @@
 
 <?php 
+	require_once ('app/config/const.php');
 	require_once('app/views/header.php'); 
 	require_once('app/controller/c_note.php');
 	require_once('app/controller/c_setting.php');
@@ -19,7 +20,8 @@
 		  $color = $_POST['cbbColorText'];
 		  $setting->createSetting($color,$token);
 		  if($token){
-		  	 header("Location: viewnote.php?token=$token");
+		  	 echo "<script type='text/javascript'>window.location.href = 'viewnote.php?token=$token';</script>";
+		  	 exit();
 		  }
 		  else{
 		  	//	 if token coincident (token new === token old)
